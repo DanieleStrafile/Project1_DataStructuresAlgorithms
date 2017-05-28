@@ -1,0 +1,74 @@
+i <-- -1
+# initialise i to be -1 so that we can quickly check whether a stack is empty
+
+
+size(S,i)
+
+Input: a stack S and the index i of the top element
+Output: the size of the stack
+
+return (i+1)
+
+
+
+isEmpty(S,i)
+Input: a stack S and the index i of the top element
+Output: true if it is empty otherwise false
+
+return (i<0)
+
+
+
+isFull(S,n,i)
+
+Input: a stack S, the size n of the stack and the index i of the top element
+Output: true if it is full otherwise false
+
+return (i+1 == n)
+
+
+
+
+peek(S,i)
+Input: a stack S and the index i of the top element
+Output: the element on top of the stack
+
+if isEmpty(S,i) = True then
+	throw Exception
+else
+	return S[i]
+	
+	
+push(S,n,i,e)
+Input: a stack S, the size n of the stack, the index i of the top element and the element e to add to the top of the stack
+Output: no output
+
+if isFull(S,n,i) = True then
+	throw Exception
+else
+	i <-- i+1
+	S[i] <-- e
+
+
+
+
+
+pop(S,i)
+
+Input: a stack S, the index i of the top element
+Output: the element e that was removed from the stack
+
+if isEmpty(S,i) = True then
+	throw Exception
+else
+	e <-- S[i]
+	S[i] = Null/None
+	i <-- i-1
+	return e
+	
+
+
+
+
+
+
